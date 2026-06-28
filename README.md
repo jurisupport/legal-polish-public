@@ -27,7 +27,29 @@
 
 ## 설치
 
-이 레포는 **Claude Code 플러그인**이자, 그 안의 스킬 폴더를 그대로 복사해 쓰는 **단독(standalone) 스킬**입니다. 둘 중 편한 방법을 고르세요.
+이 레포는 **Claude Code 플러그인**이자, 그 안의 스킬 폴더를 그대로 복사해 쓰는 **단독(standalone) 스킬**입니다. 둘 중 편한 방법을 고르되, **먼저 Claude Code가 설치돼 있어야 합니다.**
+
+### 0. 사전 준비 — Claude Code (없으면 이것부터)
+
+이 스킬은 Claude Code 위에서 동작합니다. **Claude Code가 아직 없다면**, 의존성·Claude Code 설치까지 한 번에 끝내는 **쥬리서포트 통합 패키지 부트스트랩**부터 진행하는 것을 권장합니다.
+
+macOS / Linux:
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/jurisupport/jurisupport-plugins/main/bootstrap.sh)
+```
+
+Windows (PowerShell):
+
+```powershell
+irm https://raw.githubusercontent.com/jurisupport/jurisupport-plugins/main/windows-bootstrap.ps1 | iex
+```
+
+이 한 줄이 의존성 → Claude Code → 변호사용 통합 패키지까지 설치합니다. 끝나면 새 터미널에서 `claude`로 1회 로그인하세요. 자세한 안내는 [jurisupport/jurisupport-plugins](https://github.com/jurisupport/jurisupport-plugins)를 참고합니다.
+
+> Claude Code만 따로 설치하려면 [공식 안내](https://claude.com/claude-code)를 따른 뒤 아래로 진행해도 됩니다.
+
+**Claude Code가 이미 있다면** 아래 방법으로 바로 설치합니다.
 
 ### 방법 1 — 플러그인으로 설치 (권장)
 
