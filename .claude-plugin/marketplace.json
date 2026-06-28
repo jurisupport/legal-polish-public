@@ -5,14 +5,14 @@
     "email": "admin@jurisupport.com"
   },
   "metadata": {
-    "description": "쥬리서포트 주식회사 공개 Claude Code 플러그인 — 법률문서 윤문가이드",
+    "description": "쥬리서포트 주식회사 공개 Claude Code 플러그인 — 대한민국 법률문서 다듬기 도구",
     "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "legal-polish-public",
       "source": "./",
-      "description": "한국어 법률문서 윤문가이드 — 의미는 보존하고 문장·표현·구성만 다듬는다.",
+      "description": "대한민국 법률문서 다듬기 도구 — 의미는 보존하고 문장·표현·구성만 다듬는다.",
       "version": "1.0.0",
       "license": "MIT",
       "keywords": ["legal", "korean", "law", "writing", "윤문"]
