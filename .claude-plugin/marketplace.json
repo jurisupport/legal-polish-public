@@ -1,11 +1,11 @@
 {
-  "name": "jurisupport",
+  "name": "legal-polish-public",
   "owner": {
-    "name": "JuriSupport",
+    "name": "쥬리서포트 주식회사",
     "email": "admin@jurisupport.com"
   },
   "metadata": {
-    "description": "JuriSupport 공개 Claude Code 플러그인 마켓플레이스",
+    "description": "쥬리서포트 주식회사 공개 Claude Code 플러그인 — 법률문서 윤문가이드",
     "version": "1.0.0"
   },
   "plugins": [
