@@ -16,13 +16,30 @@
 
 ## 설치
 
-Claude Code 스킬 디렉터리에 폴더째 복사합니다.
+이 레포는 **Claude Code 플러그인**이자, 그 안의 스킬 폴더를 그대로 복사해 쓰는 **단독(standalone) 스킬**입니다. 둘 중 편한 방법을 고르세요.
+
+### 방법 1 — 플러그인으로 설치 (권장)
+
+Claude Code에서:
 
 ```
-~/.claude/skills/legal-polish-public/      # 사용자 전역
-# 또는
-<프로젝트>/.claude/skills/legal-polish-public/   # 프로젝트 한정
+/plugin marketplace add jurisupport/legal-polish-public
+/plugin install legal-polish-public@jurisupport
 ```
+
+### 방법 2 — 단독 스킬로 복사
+
+레포의 `skills/legal-polish-public/` 폴더를 Claude Code 스킬 디렉터리에 폴더째 복사합니다.
+
+```
+~/.claude/skills/legal-polish-public/             # 사용자 전역
+# 또는
+<프로젝트>/.claude/skills/legal-polish-public/    # 프로젝트 한정
+```
+
+예: `git clone` 후 `cp -R legal-polish-public/skills/legal-polish-public ~/.claude/skills/`
+
+### 사용
 
 설치 후 다음과 같이 말하면 작동합니다: "이 준비서면 윤문해줘", "법률문장 매끄럽게", "서면 군더더기 빼줘".
 
@@ -38,15 +55,20 @@ Claude Code 스킬 디렉터리에 폴더째 복사합니다.
 ## 구성
 
 ```
-SKILL.md                         스킬 본문(철칙·모드·워크플로우·출력형식)
+.claude-plugin/
+  plugin.json                    플러그인 매니페스트
+  marketplace.json               마켓플레이스 메타(/plugin marketplace add 용)
+LICENSE                          MIT
 README.md                        이 파일
-references/
-  principles.md                  9개 작법 원칙(간결성·문장길이·호응·능동·…)
-  grammar-norms.md               어문규범(띄어쓰기·맞춤법·문장부호)
-  detection-checklist.md         누락 방지용 전수 점검 절차(패스 0~Z)
-  examples.md                    오리지널 ✗→✓ 예문 모음
-  doc-types.md                   문서 종류별 점검 포인트
-  SOURCES.md                     근거·저작권 고지
+skills/legal-polish-public/      ← 단독 스킬로 쓸 때 이 폴더를 복사
+  SKILL.md                       스킬 본문(철칙·모드·워크플로우·출력형식)
+  references/
+    principles.md                9개 작법 원칙(간결성·문장길이·호응·능동·…)
+    grammar-norms.md             어문규범(띄어쓰기·맞춤법·문장부호)
+    detection-checklist.md       누락 방지용 전수 점검 절차(패스 0~Z)
+    examples.md                  오리지널 ✗→✓ 예문 모음
+    doc-types.md                 문서 종류별 점검 포인트
+    SOURCES.md                   근거·저작권 고지
 ```
 
 핵심 설계: **규칙(principles·grammar-norms)** 과 **그 규칙을 빠짐없이 적용하게 만드는 절차(detection-checklist의 전수 점검 패스)** 를 분리했습니다. 규칙만 있고 빠짐없이 훑는 절차가 없으면 실제 출력에서 빠지기 때문입니다.

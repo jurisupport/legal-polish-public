@@ -1,0 +1,21 @@
+{
+  "name": "jurisupport",
+  "owner": {
+    "name": "JuriSupport",
+    "email": "admin@jurisupport.com"
+  },
+  "metadata": {
+    "description": "JuriSupport 공개 Claude Code 플러그인 마켓플레이스",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "legal-polish-public",
+      "source": "./",
+      "description": "한국어 법률문서 윤문가이드 — 의미는 보존하고 문장·표현·구성만 다듬는다.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "keywords": ["legal", "korean", "law", "writing", "윤문"]
+    }
+  ]
+}
